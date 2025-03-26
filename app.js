@@ -13,7 +13,7 @@ const PORT = config.port || 8080;
 app.use(json());
 
 const stream = {
-  write: (message) => logger.info(message.trim()),
+  write: (message) => logger.error(message.trim()),
 };
 
 app.use(

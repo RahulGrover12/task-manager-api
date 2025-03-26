@@ -1,19 +1,19 @@
-import winston from "winston";
+import winston, { format, transports } from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
 
 const logDirectory = "./logs";
 
 const logger = winston.createLogger({
   level: "info",
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.printf(
+  format: format.combine(
+    format.timestamp(),
+    format.printf(
       ({ timestamp, level, message }) =>
         `[${timestamp}] ${level.toUpperCase()}: ${message}`
     )
   ),
   transports: [
-    new winston.transports.Console({ format: winston.format.simple() }),
+    new transports.Console({ format: format.simple() }),
     new DailyRotateFile({
       dirname: logDirectory,
       filename: "%DATE%-app.log",
