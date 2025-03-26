@@ -1,0 +1,21 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "This is a Personal Task Manager API project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Rahul Grover",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.6"
+  }
+}
