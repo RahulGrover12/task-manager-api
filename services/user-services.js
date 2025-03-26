@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import db from "../models/index.js";
+import logger from "../config/logger.js";
 
 const User = db.User;
 
@@ -29,7 +30,7 @@ export const createUser = async (userData) => {
 
     return user;
   } catch (error) {
-    console.log("Error in creating new user ", error.message);
+    logger.error("Error in creating new user ", error.message);
     throw error;
   }
 };

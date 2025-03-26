@@ -6,7 +6,7 @@
 .env.postgres
 
 # logs
-*.log
+/logs
 
 # build
 dist
