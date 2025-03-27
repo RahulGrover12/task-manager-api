@@ -3,14 +3,17 @@ import authRoutes from "./routes/authUsers.js";
 import taskRoutes from "./routes/tasks.js";
 import { config } from "./config/config.js";
 import errorHandler from "./middlewares/error-handler.js";
-
 import morgan from "morgan";
 import logger from "./config/logger.js";
+import { swaggerUi, swaggerSpec } from "./config/swagger.js";
 
 const app = express();
 const PORT = config.port || 8080;
 
 app.use(json());
+
+// Swagger API DOCS
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const stream = {
   write: (message) => logger.error(message.trim()),
