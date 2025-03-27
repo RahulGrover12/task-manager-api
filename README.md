@@ -1,6 +1,6 @@
 # Task Manager API
 
-A **Node.js + Express + Sequelize** RESTful API for managing personal tasks, with user authentication, filtering, and sorting support. Built using MySQL/PostgreSQL and follows modular, production-ready backend architecture.
+A **Node.js + Express + Sequelize** RESTful API for managing personal tasks, with user authentication, filtering, and sorting support. Built using MySQL and follows modular, production-ready backend architecture.
 
 ---
 
@@ -10,7 +10,7 @@ A **Node.js + Express + Sequelize** RESTful API for managing personal tasks, wit
 - **Task Management** (CRUD)
 - **Filtering & Sorting** (by status, priority, due date)
 - **Authentication Middleware**
-- **Sequelize ORM with Migrations**
+- **Sequelize ORM**
 - **Google ESLint Style Guide**
 - **Error Handling Middleware**
 - **Optional: Pagination**
@@ -34,4 +34,4 @@ A **Node.js + Express + Sequelize** RESTful API for managing personal tasks, wit
 - **DB_NAME=taskmanagerapi**
 - **DB_PORT=your_port**
 - **PORT=your_port**
-- **JWT_SECRET=your_long_secure_jwt_secret**
+- **JWT_SECRET=your_jwt_secret**
